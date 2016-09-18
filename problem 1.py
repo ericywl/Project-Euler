@@ -7,3 +7,5 @@ for i in range(1, 1000):
 		continue
 
 print(add)
+
+# sum of natural numbers below 1000 that are divisable by either 3 or 5
