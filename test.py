@@ -1,4 +1,11 @@
-# 2 3 4 5 6 7 8 9 10
-# 2 3 2 5 1 7 2 3 1
+pal = []
 
-print(2*3*2*5*7*2*3)
+for i in range(100 ** 2, 1000 ** 2):
+    if str(i) == str(i)[::-1]:
+        pal.append(i)
+
+for n in pal:
+    for x in range(100, 1000):
+        if 99 < n / x < 1000 and n % x == 0:
+            print(x, n//x, n)
+            break
