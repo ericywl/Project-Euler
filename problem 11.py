@@ -23,4 +23,37 @@ nlist.append("01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48")
 grid = [x.split() for x in nlist]
 grid = [[int(y) for y in x] for x in grid]
 
-print(grid)
+max_pro = 0
+
+for x in range(20):
+	for y in range(17):
+		pro = grid[x][y] * grid[x][y+1] * grid[x][y+2] * grid[x][y+3]	# left/right
+		if pro > max_pro:
+			max_pro = pro
+		pro = grid[y][x] * grid[y+1][x] * grid[y+2][x] * grid[y+3][x]	# up/down
+		if pro > max_pro:
+			max_pro = pro
+
+for x in range(17):
+	for y in range(17):
+		pro = grid[x][y] * grid[x+1][y+1] * grid[x+2][y+2] * grid[x+3][y+3] # right diagonal
+		if pro > max_pro:
+			max_pro = pro
+
+for x in range(3, 20):
+	for y in range(17):
+		pro = grid[y][x] * grid[y+1][x-1] * grid[y+2][x-2] * grid [y+3][x-3] # left diagonal
+		if pro > max_pro:
+			max_pro = pro
+
+print(max_pro)
+
+# find the greatest product of 4 adjacent numbers in the same direction
+
+
+
+
+
+
+
+
