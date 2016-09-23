@@ -49,11 +49,3 @@ for x in range(3, 20):
 print(max_pro)
 
 # find the greatest product of 4 adjacent numbers in the same direction
-
-
-
-
-
-
-
-

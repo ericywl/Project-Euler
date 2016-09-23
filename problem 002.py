@@ -11,10 +11,10 @@ while x + y <= 4 * 10**6:
 
 for i in fib:
 	if i % 2 == 0:
-		add = add + i
+		add += i
 	else:
 		continue
 
 print(add)
 
-# sum of all even fibonacci numbers <= 4 million
+# sum of all even fibonacci numbers less than or equal to 4 million

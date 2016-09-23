@@ -1,6 +1,4 @@
-summ = 0
-add = 0
-square = 0
+summ, add, square = (0, 0, 0)
 
 for a in range(1, 101):
 	summ +=  a ** 2

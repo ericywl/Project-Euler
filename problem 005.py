@@ -11,7 +11,7 @@ for y in range(2, 21):
 
 # prime number generator
 
-for c in range(1, 5):
+for c in range(1, 7):
 	for p in primes:
 		powers.append(p ** c)
 

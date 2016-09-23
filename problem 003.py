@@ -1,9 +1,12 @@
+import time
+ti = time.time()
+
 num1 = 13195
 num2 = 600851475143
 
 i = 2
 
-#solution 1
+# solution 1 (much faster for large numbers)
 
 while num2 > i ** 2:
 	while num2 % i == 0:
@@ -12,13 +15,13 @@ while num2 > i ** 2:
 
 print(num2)
 
-#solution 2
+# solution 2
 
 while num2 != 1:
-    if num2 % i == 0:
-    	num2 /= i
-    else:
-    	i += 1
+	if num2 % i == 0:
+		num2 /= i
+	else:
+		i += 1
     	
 print(i)
 
