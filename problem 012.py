@@ -4,7 +4,7 @@ def factors1(n):
     j = []
     for i in range(1, int(math.sqrt(n)) + 1):
         if n % i == 0:
-            j += [i, n//i]
+            j += [i, n // i]
     return j
 
 from itertools import chain, cycle, accumulate
