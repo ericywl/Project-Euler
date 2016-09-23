@@ -25,12 +25,15 @@ grid = [[int(y) for y in x] for x in grid]
 
 max_pro = 0
 
+import functools
+import operator
+
 for x in range(20):
 	for y in range(17):
-		pro = grid[x][y] * grid[x][y+1] * grid[x][y+2] * grid[x][y+3]	# left/right
+		pro = functools.reduce(operator.mul, grid[x][y:y+4])	# left/right
 		if pro > max_pro:
 			max_pro = pro
-		pro = grid[y][x] * grid[y+1][x] * grid[y+2][x] * grid[y+3][x]	# up/down
+		pro = functools.reduce(operator.mul, grid[y][x:x+4])	# up/down
 		if pro > max_pro:
 			max_pro = pro
 
