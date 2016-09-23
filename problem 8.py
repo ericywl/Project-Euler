@@ -9,8 +9,8 @@ import operator
 import functools
 
 while y < 1000:
-	if functools.reduce(operator.mul, dlist[x:y], 1) > pro:
-		pro = functools.reduce(operator.mul, dlist[x:y], 1)
+	if functools.reduce(operator.mul, dlist[x:y]) > pro:
+		pro = functools.reduce(operator.mul, dlist[x:y])
 	x += 1
 	y += 1
 
