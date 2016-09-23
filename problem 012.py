@@ -1,27 +1,13 @@
 import math
-import functools
+
+def factors1(n):
+    j = []
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            j += [i, n//i]
+    return j
+
 from itertools import chain, cycle, accumulate
-
-def factors1(n):    
-    return set(functools.reduce(list.__add__, 
-                ([i, n//i] for i in range(1, int(math.sqrt(n)) + 1) if n % i == 0)))
-
-trisum = 1
-x = 2
-trilist = set()
-
-while trisum < 10**8:
-	trisum += x
-	x += 1
-	trilist.add(trisum)
-
-# triangle numbers generator
-
-for n in trilist:
-	if len(factors1(n)) > 500:
-		print(n)
-
-# find first triangle number with more than 500 factors
 
 def factors2(n):
     def prime_powers(n):
@@ -40,7 +26,21 @@ def factors2(n):
         r += [a*b for a in r for b in e]
     return r
 
-# more efficient code for factors
+# a faster code for factors (disclaimer: not mine)
+
+trisum = 0
+x = 1
+trilist = set()
+
+while True:
+    trisum += x
+    x += 1
+    if len(factors1(trisum)) > 500:
+        print(trisum)
+        break
+
+# find first triangle number with more than 500 factors
+
 
 
 

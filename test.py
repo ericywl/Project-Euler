@@ -1,7 +1,10 @@
-i = [1, 2, 3, 4, 5, 6]
-
 import functools
 import operator
+import math
 
-p = functools.reduce(operator.mul, i[0:4])
-print(p)
+def function(n):
+    j = []
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            j += [i, n//i]
+    return j
