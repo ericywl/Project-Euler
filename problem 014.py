@@ -21,3 +21,5 @@ for n in range(10**6, 1, -1):
 		collatz(n)
 
 print(max(L))
+
+# find number less than 1 million with the longest collatz chain
